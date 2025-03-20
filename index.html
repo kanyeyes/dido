@@ -1,63 +1,104 @@
-﻿<!DOCTYPE html>
-<html lang="zh">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>桌面版 - 单页网站</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            height: 100vh; /* 占满屏幕高度 */
-            display: flex; /* 使用 Flexbox 垂直居中 */
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-image: url('https://i.imgur.com/2F7pW8k.png'); /* 你的背景图片 */
-            background-size: cover; /* 图片覆盖整个屏幕 */
-            background-position: center; /* 图片居中 */
-            color: white; /* 文字颜色 */
-            text-align: center; /* 文字居中 */
-        }
-        .content {
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5); /* 半透明背景，便于文字可读性 */
-            border-radius: 10px; /* 圆角 */
-            max-width: 800px; /* 内容最大宽度 */
-        }
-        h1 {
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字阴影 */
-        }
-        p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            line-height: 1.5;
-        }
-        .button {
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background-color: #87CEEB; /* 浅蓝色按钮 */
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .button:hover {
-            background-color: #76B9E0; /* 悬停时稍深的浅蓝色 */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HelloWorld - 与世界高效相连</title>
+  <meta name="description" content="我们整合国内外众多智能翻译资源，跨越语言障碍，适用于集成式跨境电商客服等场景。">
+  
+  <!-- 确保 Vercel 能正确解析路径 -->
+  <base href="/" />
+  
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #0f172a;
+      line-height: 1.5;
+    }
+    .main {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+    .background {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image: url('/images/background.png'); /* 确保图片存放在 public/images/ 目录 */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: brightness(0.85);
+    }
+    .content-overlay {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 0 1rem;
+      text-align: center;
+    }
+    .heading {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #0284c7;
+      margin-bottom: 2rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    @media (min-width: 768px) {
+      .heading { font-size: 3rem; }
+    }
+    @media (min-width: 1024px) {
+      .heading { font-size: 3.75rem; }
+    }
+    .cta-button {
+      background-color: #0284c7;
+      color: white;
+      font-size: 1.125rem;
+      font-weight: 500;
+      padding: 1.5rem 2rem;
+      border: none;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      margin-bottom: 2rem;
+      transition: background-color 0.2s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .cta-button:hover {
+      background-color: #0369a1;
+    }
+    .description {
+      max-width: 48rem;
+      font-size: 1.125rem;
+      color: #0f172a;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 1rem;
+      border-radius: 0.375rem;
+      margin-bottom: 4rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+  </style>
 </head>
 <body>
-    <div class="content">
-        <h1>桌面版</h1>
-        <p>体验我们的桌面应用，高效便捷，助您提升效率！立即下载，畅享全新功能。</p>
-        <a href="https://youtu.be/vjexVOf-s2Y?si=bIdGivRyLLOdF7SJ" class="button">立即下载</a>
+  <main class="main">
+    <div class="background"></div>
+    <div class="content-overlay">
+      <h1 class="heading">HelloWorld 与世界高效相连</h1>
+      <button class="cta-button">进入官网</button>
+      <p class="description">
+        汇聚国际主流社交软件, 如 WhatsApp、Facebook、Instagram、Line、Tinder 等，实现跨平台互联互通。
+        用户可轻松管理多个社交账号，随时随地畅享全球社交新体验。
+      </p>
     </div>
+  </main>
 </body>
 </html>
