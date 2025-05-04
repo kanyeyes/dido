@@ -3,79 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>与世界高效相连</title>
-  <meta name="description" content="我们整合国内外众多智能翻译资源，跨越语言障碍，适用于集成式跨境电商客服等场景。">
-  <base href="/" />
+  <title>HelloWorld - 与世界高效相连</title>
+  <meta name="description" content="我们整合国内外众多智能翻译资源，跨越语言障碍，适用于集成式跨境电商客服、沉浸式出海业务拓展等场景汇聚国际主流社交软件，如WhatsApp、Facebook、Instagram、Line、Tinder等，实现跨平台互联互通，用户可轻松管理多个社交账号，随时随地畅享全球社交新体验，尽情探索多彩社交世界。">
   <style>
+    /* Reset and base styles */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+    
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       color: #0f172a;
       line-height: 1.5;
-      background: #f9fafb;
     }
+    
+    /* Main container styles */
     .main {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
       position: relative;
+      min-height: 100vh;
+      width: 100%;
+      overflow: hidden;
     }
+    
+    /* Background image */
     .background {
       position: absolute;
       inset: 0;
       z-index: 0;
-      background: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3%2019%201-YYqlzxqxW8cx5FISSwu3khgX76l5Jx.png') center/cover no-repeat;
+      background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3%2019%201-YYqlzxqxW8cx5FISSwu3khgX76l5Jx.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       filter: brightness(0.85);
     }
-    .content {
+    
+    /* Content overlay */
+    .content-overlay {
       position: relative;
-      z-index: 1;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.5);
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 0 1rem;
+      text-align: center;
     }
+    
+    /* Main heading */
     .heading {
-      font-size: 2.5rem;
-      font-weight: bold;
+      font-size: 2.25rem;
+      font-weight: 700;
       color: #0284c7;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+    
+    @media (min-width: 768px) {
+      .heading {
+        font-size: 3rem;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .heading {
+        font-size: 3.75rem;
+      }
+    }
+    
+    /* CTA Button */
     .cta-button {
-      background: #0284c7;
-      color: #fff;
-      padding: 1rem 2rem;
+      background-color: #0284c7;
+      color: white;
+      font-size: 1.125rem;
+      font-weight: 500;
+      padding: 1.5rem 2rem;
       border: none;
-      border-radius: 5px;
-      font-size: 1.2rem;
+      border-radius: 0.375rem;
       cursor: pointer;
-      transition: 0.3s;
+      margin-bottom: 2rem;
+      transition: background-color 0.2s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+    
     .cta-button:hover {
-      background: #0369a1;
+      background-color: #0369a1;
     }
+    
+    /* Description text */
     .description {
-      margin-top: 1.5rem;
-      font-size: 1.1rem;
-      max-width: 600px;
+      max-width: 48rem;
+      font-size: 1.125rem;
+      color: #0f172a;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 1rem;
+      border-radius: 0.375rem;
+      margin-bottom: 4rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     }
   </style>
 </head>
 <body>
   <main class="main">
+    <!-- Background image div -->
     <div class="background"></div>
-    <div class="content">
-      <h1 class="heading">HelloWorld翻译 与世界高效相连</h1>
+    
+    <!-- Content overlay -->
+    <div class="content-overlay">
+      <!-- Main heading -->
+      <h1 class="heading">HelloWorld 与世界高效相连</h1>
+      
+      <!-- CTA Buttons -->
       <button class="cta-button">进入官网</button>
+      <a href="https://gg502.s3.ap-southeast-1.amazonaws.com/HelloWorld_x64.msi" class="cta-button download-button" style="display: inline-block; text-decoration: none; margin-left: 1rem; background-color: #10b981;">点击下载</a>
+      
+      <!-- Description text -->
       <p class="description">
-        汇聚国际主流社交软件，如 WhatsApp、Facebook、Instagram、Line、Tinder 等，实现跨平台互联互通。
-        用户可轻松管理多个社交账号，随时随地畅享全球社交新体验。
+        汇聚国际主流社交软件,如WhatsApp、Facebook、Instagram、Line、Tinder等,实现跨平台互联互通，用户可轻松管理多个社交账号，随时随地畅享全球社交新体验，尽情探索多彩社交世界。
+        我们整合国内外众多智能翻译资源，力求为您提供最精准、最专业的自动翻译服务。以匠心打造每一次翻译，确保您的信息传达准确无误，助您实现全球化业务拓展。
       </p>
     </div>
   </main>
